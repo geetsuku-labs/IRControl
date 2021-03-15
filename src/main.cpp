@@ -1,6 +1,9 @@
 #include <Arduino.h>
 #include <ArduinoLog.h>
 #include <IRremote.h>
+#include "config.hpp"
+
+namespace ir = config::ir;
 
 void setup() {
   Serial.begin(115200);
@@ -11,6 +14,8 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  IrSender.sendNECMSB(0x7E8154AB, 32, false);
-  delay(5000);
+  IrSender.write(&ir::YAMAHA_VOL_INC);
+  delay(500);
+  IrSender.write(&ir::YAMAHA_VOL_DEC);
+  delay(500);
 }
