@@ -1,5 +1,4 @@
-#ifndef IP_MANAGER_HPP
-#define IP_MANAGER_HPP
+#pragma once
 
 #include <ETH.h>
 #include <WiFiMulti.h>
@@ -20,4 +19,3 @@ private:
 };
 
 extern IPManagerClass IPManager;
-#endif

@@ -1,5 +1,4 @@
-#ifndef OTAUPDATER_HPP
-#define OTAUPDATER_HPP
+#pragma once
 
 #include <ArduinoOTA.h>
 #include <ESPmDNS.h>
@@ -21,5 +20,3 @@ class OTAUpdaterClass
 };
 
 extern OTAUpdaterClass OTAUpdater;
-
-#endif

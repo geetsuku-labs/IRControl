@@ -15,7 +15,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   IrSender.write(&ir::YAMAHA_VOL_INC);
-  delay(500);
+  delay(800);
   IrSender.write(&ir::YAMAHA_VOL_DEC);
-  delay(500);
+  delay(800);
 }
