@@ -7,7 +7,7 @@ namespace ir = config::ir;
 
 void setup() {
   Serial.begin(115200);
-  Log.begin(LOG_LEVEL_NOTICE, &Serial);
+  Log.begin(LOG_LEVEL, &Serial);
   pinMode(23, OUTPUT_OPEN_DRAIN);
   IrSender.setSendPin(23);
 }
