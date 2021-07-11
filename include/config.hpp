@@ -1,5 +1,4 @@
-#ifndef CONFIG_HPP
-#define CONFIG_HPP
+#pragma once
 
 #include <Arduino.h>
 #include <IRremoteInt.h>
@@ -9,7 +8,7 @@ namespace config
 {
     namespace ip
     {
-        const char    *HOSTNAME = "remote";
+        const char    *HOSTNAME = "irremote";
         const uint16_t OTA_PORT = 8266;
     };
 
@@ -21,4 +20,3 @@ namespace config
     };
 };
 
-#endif
