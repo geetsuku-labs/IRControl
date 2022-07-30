@@ -1,7 +1,7 @@
 import subprocess, datetime
 
 revision = (
-    subprocess.check_output(["git", "rev-parse", "HEAD"])
+    subprocess.check_output(["git", "describe", "--match=''", "--always", "--abbrev=40", "--dirty"])
     .strip()
     .decode("utf-8")
 )
