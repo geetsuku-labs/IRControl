@@ -4,10 +4,17 @@
 #include "config.hpp"
 #include "IRCodes.hpp"
 
+namespace {
+  void serialSetup(HardwareSerial &serial, unsigned long baud) {
+    serial.begin(baud);
+    serial.println(F("Booting PVE Control..."));
+  }
+} // namespace
+
 void setup() {
-  Serial.begin(115200);
-  Log.begin(LOG_LEVEL_NOTICE, &Serial);
-  pinMode(23, OUTPUT_OPEN_DRAIN);
+  serialSetup(Serial, 115200);
+  LOG::setup();
+  pinMode(IR_SEND_PIN, OUTPUT_OPEN_DRAIN);
 }
 
 void loop() {
