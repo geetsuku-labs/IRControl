@@ -6,3 +6,5 @@
 include/credentials.hpp
 
 *~
+.ccls
+.ccls-cache/
