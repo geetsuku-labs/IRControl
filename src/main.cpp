@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <ArduinoLog.h>
-#include <IRremote.h>
+#include <IRremote.hpp>
 #include "config.hpp"
 #include "IRCodes.hpp"
 
